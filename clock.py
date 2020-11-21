@@ -56,3 +56,11 @@ else:
         else:
             print("the time is now", settime, ":", settime2, AMPM)
 
+"""
+How to work the clock
+Type in what hour time it is 
+Then, type in what minute time it is
+Choose whether it is AM or PM
+Then, the clock will update every minute 
+Python File
+"""

@@ -14,13 +14,12 @@ if settime2 < 10:
             settime2 = 1
         else:
             settime += 0
-        if settime > 12:
-            settime = 1
-            AMPM = "PM"
-        elif settime > 12:
+        if settime % 12 == 0 and AMPM == "PM":
             settime = 1
             AMPM = "AM"
-        if settime > 11 and AMPM == "AM":
+        else:
+            AMPM = "PM"
+        if settime % 12 == 0 and AMPM == "AM":
             AMPM = "PM"
         else:
             AMPM = "AM"
@@ -43,13 +42,12 @@ else:
             settime2 = 0
         else:
             settime += 0
-        if settime > 12:
-            settime = 1
-            AMPM = "PM"
-        elif settime > 12:
+        if settime % 12 == 0 and AMPM == "PM":
             settime = 1
             AMPM = "AM"
-        if settime > 11 and AMPM == "AM":
+        else:
+            AMPM = "PM"
+        if settime % 12 == 0 and AMPM == "AM":
             AMPM = "PM"
         else:
             AMPM = "AM"

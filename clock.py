@@ -14,12 +14,16 @@ if settime2 < 10:
             settime2 = 1
         else:
             settime += 0
-        if settime % 12 == 0 and AMPM == "PM":
+        if settime % 13 == 0 and AMPM == "PM":
             settime = 1
             AMPM = "AM"
         else:
             AMPM = "PM"
-        if settime % 12 == 0 and AMPM == "AM":
+        if settime % 13 == 0:
+            settime = 1
+        else:
+            continue
+        if settime % 13 == 0 and AMPM == "AM":
             AMPM = "PM"
         else:
             AMPM = "AM"
@@ -42,19 +46,25 @@ else:
             settime2 = 0
         else:
             settime += 0
-        if settime % 12 == 0 and AMPM == "PM":
+        if settime % 13 == 0 and AMPM == "PM":
             settime = 1
             AMPM = "AM"
         else:
             AMPM = "PM"
-        if settime % 12 == 0 and AMPM == "AM":
+        if settime % 13 == 0 and AMPM == "AM":
             AMPM = "PM"
         else:
             AMPM = "AM"
+        if settime % 13 == 0:
+            settime = 1
+        else:
+            continue
         if settime2 < 10:
             print("the time is now", settime, ": 0", settime2, AMPM)
         else:
             print("the time is now", settime, ":", settime2, AMPM)
+
+
 
 """
 How to work the clock
